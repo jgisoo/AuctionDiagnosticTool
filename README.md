@@ -1,164 +1,164 @@
-# AuctionDiagnosticTool
-🚀 SP + CD Diagnostic Dashboard — Internship Project
+# 🚀 SP + CD Diagnostic Dashboard — Internship Project
 
-Welcome to the Sponsored Products + Onsite Display Diagnostic Dashboard — a tool built to help developers, technical support engineers, and analysts better understand why certain SKUs are delivered (or not!) during the ad auction process.
+The **Sponsored Products + Onsite Display Diagnostic Dashboard** is an internal developer tool designed to help engineers and technical support teams better understand why certain SKUs are delivered (or excluded) during the ad auction process.
 
-This project was designed to make internal debugging:
+This project improves visibility into:
 
-faster ⚡
+- Auction outcomes
+- SKU eligibility and filtering
+- Campaign and creative metadata
+- Line item delivery behavior
 
-more visual 🎨
+All without needing to manually query services or logs.
 
-and way less “dig through logs + query everything manually” 🥲
+---
 
-🎯 Project Goal
+## 🎯 Project Goal
 
-The goal of this project was to:
+The primary goal of this project was to:
 
-Build an internal diagnostic page that exposes key auction, campaign, and SKU-level insights — without requiring manual queries or digging through multiple services.
+> Build an internal diagnostic page that exposes key auction, campaign, and SKU-level insights — without requiring manual data lookups or external debugging tools.
 
-This page helps teams:
+The page helps teams:
 
-✔ Understand auction & delivery outcomes
-✔ Investigate why SKUs were filtered or excluded
-✔ View campaign, creative, and targeting metadata in one place
-✔ Improve debugging workflows across engineering & TS orgs
+✔ Investigate auction & delivery results  
+✔ Understand SKU-level filtering and eligibility  
+✔ View placement, campaign, and creative information in one place  
+✔ Reduce time spent analyzing logs or tracing pipeline behavior  
 
-While the page handles common diagnostic scenarios, it’s designed to be extensible — future features and new models can be plugged in as needed.
+While the dashboard covers common scenarios, it is intentionally designed to support future extensions and new delivery models.
 
-🧠 What I Learned
+---
 
-Working on this project helped me:
+## 🧠 What I Learned During the Project
 
-Deep-dive into the ad delivery pipeline 🏗️
+This project helped me:
 
-Understand the organization’s architecture & services
-
-Work with Razor Pages & backend C# models
-
-Interpret auction data, SKU ranking logic, and filtering rules
-
-Collaborate with engineers + product stakeholders
-
-Translate technical logic → usable developer tools
+- Deeply understand the ad delivery and auction pipeline
+- Work within a large production codebase and service architecture
+- Build strongly-typed diagnostic models in C#
+- Work with Razor Pages and Bootstrap UI components
+- Translate backend logic into visual debugging tools
+- Collaborate with engineers and product partners
 
 It was a great mix of:
 
-backend reverse engineering + UI diagnosis + developer tooling 🚀
+> backend diagnostics, data interpretation, and developer tooling.
 
-🛠️ Key Features I Implemented
-✅ Accordion-based placement breakdown
+---
 
-Groups placements logically
+## 🛠️ Key Features I Implemented
 
-Separates Sponsored Products vs Onsite Display
+### ✅ Placement & Line-Item Accordion View
 
-Expands into line-item level insights
+- Groups placements logically
+- Separates Sponsored Products and Onsite Display
+- Expands down to individual line items and SKU data
 
-🟢 Visual delivery indicators
+---
 
-Buttons & headers change state based on delivery:
+### 🟢 Visual Delivery Indicators
 
-Green = Delivered successfully
+Delivery state is clearly shown using UI signals:
 
-Grey = Not delivered / filtered
+- Green states indicate delivered SKUs
+- Grey states indicate filtered / not delivered
 
-This makes debugging outcomes easier at a glance.
+This allows faster scanning and interpretation.
 
-📦 SKU Results Explorer
+---
 
-For each line item:
+### 📦 SKU Results Explorer
 
-Iterates SKUs without duplication
+For each line item, the dashboard:
 
-Separates Delivered vs Ineligible SKUs
+- Iterates over all SKUs without duplication
+- Separates Delivered vs Ineligible SKUs
+- Displays SKU metadata
+- Provides modal pop-ups with full details, including:
 
-Displays SKU-level metadata
+  - SKU ID and key
+  - Product attributes
+  - Advertiser and taxonomy identifiers
+  - Quantity and pricing
+  - Rendering and culture attributes
 
-Opens modal detail panels with:
+Developers can now inspect SKU context with a single click.
 
-SKU ID
+---
 
-Product info
+### 🧩 Campaign, Creative & Account Information Panels
 
-Advertiser & taxonomy ids
+Data is organized into readable “section card” panels, including:
 
-Quantity, price, attributes, etc.
+- Campaign information and buy type
+- Line item configuration
+- Creative format metadata
+- Account and advertiser identifiers
 
-Developers can now view complete SKU context in one click 🎯
+This reduces the need to cross-reference external tools.
 
-🧩 Campaign, Creative & Account Info Panels
+---
 
-Includes:
-
-Campaign info & buy type
-
-Line item configuration
-
-Creative format metadata
-
-Account information
-
-Organized into clean “section cards” for readability.
-
-💬 Tooltips, UI helpers & diagnostics hints
+### 💬 Tooltips & Contextual Debugging Hints
 
 Added:
 
-tooltips for domain-specific terms
+- tooltips for domain-specific terminology
+- contextual explanations
+- diagnostic guidance for auction behavior
 
-context explanations
+This improves onboarding and knowledge transfer across teams.
 
-debugging hints for auction behavior
+---
 
-This helps reduce tribal knowledge + onboarding friction.
+## 🎥 Demo
 
-🎥 Demo
+A video walkthrough will be added here.
 
-(This section is reserved for the project video walkthrough)
-📌 Will include a short demo explaining:
+_(Placeholder area reserved for project demo video.)_
 
-problem → solution
+---
 
-architecture overview
-
-feature highlights
-
-🧩 Tech Stack
+## 🧩 Tech Stack
 
 Built using:
 
-Razor Pages (ASP.NET)
+- ASP.NET Razor Pages
+- C#
+- Strongly-typed backend models
+- Bootstrap Components
+- Accordion + Modal UI Patterns
 
-C#
+Designed specifically for internal diagnostics and engineering workflows.
 
-Bootstrap UI components
+---
 
-Modal & accordion components
+## 🚦 Impact
 
-Strongly-typed diagnostic models
+This dashboard improves debugging efficiency by:
 
-Designed for internal debugging workflows — not public dashboards.
-
-🚦 Impact
-
-This project improves developer + TS pipelines by:
-
-✨ Reducing time spent querying logs
-✨ Making delivery outcomes easier to interpret
+✨ Reducing manual queries and log inspection  
+✨ Centralizing visibility into delivery outcomes  
+✨ Making SKU eligibility easier to interpret  
+✨ Supporting faster hypothesis testing  
 ✨ Improving onboarding for new engineers
-✨ Centralizing diagnostic context
-✨ Enabling faster hypothesis testing
 
 Instead of:
 
-“Why didn’t this SKU deliver? Let’s look in 5 tools…”
+> Manually tracing auction logic across multiple services
 
-Now it’s:
+Teams can now:
 
-“Open the diagnostic page — the answer’s right there.” 😎
+> Open the diagnostic dashboard and view answers immediately.
 
-🎉 Credits
+---
 
-Built during my internship — with mentorship, feedback & support from the team 🤍
-Huge thanks to everyone who helped review code, explain pipeline logic, and share domain knowledge
+## 🎉 Acknowledgements
+
+This project was developed during my internship with guidance, feedback, and collaboration from the engineering team.
+
+I’m grateful to everyone who helped review code, explain pipeline logic, and share domain knowledge throughout this project.
+
+---
+
