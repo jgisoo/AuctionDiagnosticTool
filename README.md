@@ -1,4 +1,4 @@
-# 🚀 SP + CD Diagnostic Dashboard — Internship Project
+# 🚀 Diagnostic Dashboard | Internship Project
 
 The **Sponsored Products + Onsite Display Diagnostic Dashboard** is an internal developer tool designed to help engineers and technical support teams better understand why certain SKUs are delivered (or excluded) during the ad auction process.
 
