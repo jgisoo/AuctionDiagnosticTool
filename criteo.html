@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Internship Project Diagnostic Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      background: #f7f9fc;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 32px 18px;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 0 20px;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: #1f3c88;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    section {
+      background: #ffffff;
+      padding: 24px;
+      margin: 16px 0;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #1f3c88;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 50px;
+      background: #e9f0ff;
+      color: #1f3c88;
+      margin-right: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .video-placeholder {
+      background: #e6ecf7;
+      border: 2px dashed #9aa6c6;
+      border-radius: 16px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #445;
+      font-size: 18px;
+      text-align: center;
+      padding: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0 60px;
+      color: #666;
+    }
+
+    @media (max-width: 850px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Diagnostic Dashboard — Internship Project</h1>
+      <p>Built during my Software Developer Internship • Internal tooling for engineers & tech support</p>
+    </header>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        This project improves visibility into auction outcomes and SKU eligibility by expanding the
+        internal diagnostic dashboard used by developers and technical support. It helps teams
+        understand why certain SKUs do or do not serve, without needing to manually query data.
+      </p>
+    </section>
+
+    <section class="grid-2">
+      <div>
+        <h2>The Problem</h2>
+        <ul>
+          <li>Developers lacked visibility into auction decision logic</li>
+          <li>Difficult to diagnose why expected SKUs were not served</li>
+          <li>Engineers needed to manually query logs & pipelines</li>
+          <li>Existing diagnostic page lacked structured breakdowns</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Project Goal</h2>
+        <ul>
+          <li>Provide a richer, structured diagnostic page</li>
+          <li>Surface auction + SKU eligibility data in one place</li>
+          <li>Reduce investigation time for dev & TS teams</li>
+          <li>Help new engineers understand pipeline behavior</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>My Contributions</h2>
+      <ul>
+        <li>Implemented new Razor Pages(C# + HTML) UI sections & data bindings (.NET)</li>
+        <li>Added expandable SKU lists (delivered / ineligible)</li>
+        <li>Created SP-only filtering logic in placements panel</li>
+        <li>Integrated tooltips, icons, and visual status signals</li>
+        <li>Improved clarity of metrics & diagnostic context</li>
+        <li>Collaborated with engineers to understand backend pipeline</li>
+      </ul>
+    </section>
+
+    <section class="grid-2">
+      <div>
+        <h2>Technical Stack</h2>
+        <span class="pill">ASP.NET Razor Pages</span>
+        <span class="pill">C# Models</span>
+        <span class="pill">Bootstrap UI</span>
+        <span class="pill">Diagnostics Data</span>
+        <span class="pill">Expandable Components</span>
+
+        <p style="margin-top:10px">
+          This project improved my understanding of:
+        </p>
+        <ul>
+          <li>Backend data models & SKU pipelines</li>
+          <li>Razor binding & component structure</li>
+          <li>Collaboration across engineering teams</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Impact</h2>
+        <ul>
+          <li>Faster debugging of auction behavior</li>
+          <li>Reduced manual data investigation effort</li>
+          <li>Better transparency for engineers</li>
+          <li>More intuitive diagnostic workflow</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+  <h2>📹 Project Demo</h2>
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px;">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_CZQHWf6-RE?si=OEe54mjVJps4JWwe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+
+    <footer>
+     Criteo Internship Project • Thanks for reading!
+    </footer>
+
+  </div>
+</body>
+</html>
