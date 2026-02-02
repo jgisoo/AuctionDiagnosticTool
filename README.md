@@ -110,15 +110,6 @@ Added:
 
 This improves onboarding and knowledge transfer across teams.
 
----
-
-## 🎥 Demo
-
-A video walkthrough will be added here.
-
-_(Placeholder area reserved for project demo video.)_
-
----
 
 ## 🧩 Tech Stack
 
